@@ -14,10 +14,10 @@ const {
 } = require("./middlewares/authentication");
 
 const app = express();
-const PORT = process.env.PORT || 8000;
+const PORT = 8010;
 
 mongoose
-  .connect(process.env.MONGO_URL)
+  .connect("mongodb+srv://vishalsingh9632:<password>@cluster0.ieairrz.mongodb.net/?retryWrites=true&w=majority")
   .then((e) => console.log("MongoDB Connected"));
 
 app.set("view engine", "ejs");
